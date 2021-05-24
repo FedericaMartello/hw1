@@ -1,0 +1,14 @@
+/* Aggiorna il totale quando vengono aggiunti prodotti*/
+drop trigger aggiorna_tot;
+delimiter //
+create trigger aggiorna_tot
+after insert on carrello
+for each row
+begin
+if exists (select * from ordine where id_ordine=new.ordine)
+then
+update ordine
+set totale=totale + (new.quantita * (select prezzo from prodotto where id_prodotto=new.prodotto))
+where id_ordine=new.ordine;
+end if;
+end//
