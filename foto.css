@@ -1,0 +1,317 @@
+body{
+    margin:0;
+    color: black;
+    background-color: whitesmoke;
+    font-family: 'Prompt', sans-serif;
+    font-size:20px;
+}
+
+header{
+    background-image: url(https://www.viralnation.com/wp-content/uploads/2019/03/back1.jpg);
+    background-size:cover;
+    background-position:center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 750px;
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header nav{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    top:0;
+    right: 0;
+    left:0;
+}
+
+header h1{
+    font-family: 'Racing Sans One', cursive, sans;
+    text-shadow: rgb(244, 173, 10) 2px 2px;
+    color: blanchedalmond;
+    font-size:2em;
+    z-index: 1;
+    margin-bottom: 470px;
+}
+
+#logo img{
+    border: 2px solid lightblue;
+    border: 3px solid black;
+    border-radius: 100%;
+    width: 50%;
+    height: auto;
+    margin-top: 5px;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1300px;
+}
+
+#menu a{
+    text-decoration: none;
+    font-size: 0.8em;
+    cursor: pointer;
+    border-radius: 100px;
+    margin: 15px;
+    padding:5px;
+    border: 3px solid black;
+    background-color: rgb(244, 173, 10);
+    font-weight: bold;
+}
+
+#menu a:hover{ background-color: rgba(244, 173, 10, .5); }
+
+#menu a:active{ color: unset; }
+
+#menu a:any-link{ color: unset; }
+
+#menu-mobile div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 2px;
+}
+
+#menu-mobile{ display: none; }
+
+form{
+    z-index: 1;
+    width: 45%;
+    margin-bottom: 60px;
+}
+
+#food{
+    font-family: 'Indie Flower', cursive, sans-serif;
+    font-size: 1.1em;
+    border:3px solid black;
+    width: 50%;
+    margin-bottom: 25px;
+    padding: 0;
+    border-radius: 100px;
+}
+
+#submit{
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color:rgb(244, 173, 10);
+    border: 3px solid black;
+    border-radius: 80px;
+    width: 18%;
+    padding: 2px;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#album-foto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+#album-foto img{
+    cursor: pointer;
+    background-color: rgba(237,73,1,.8);
+    width: 30%;
+    height: fit-content;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+#modale.hidden{
+    display: none;
+}
+
+#modale{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modale img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+footer{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: whitesmoke;
+    display: flex;
+    justify-content:space-around;
+    background-color: rgb(40, 39, 40);
+    height: 200px;
+}
+
+.info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    width: calc(80%/3);
+}
+ 
+.info h1{ color: rgb(92, 86, 86); }
+
+.info p{
+    margin:0;
+    font-size:0.9em;
+}
+
+.info strong{
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.info address{ margin-top: 20px; }
+
+
+
+#footer-mobile{ display:none; }
+
+.back{
+    z-index: 0;
+}
+
+
+@media (max-width: 500px) {
+    body { font-size: 14.5px;}
+
+    #menu{ display: none; }
+
+    #menu-mobile { display: block; }
+
+    header{ height:200px; }
+
+    #logo { width: 17%; }
+
+
+    footer{ height:90px; }
+
+    #footer-mobile {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .f-m{
+        text-align: center;
+        width: calc(93%/3);
+    }
+
+    .f-m a{
+        color: rgb(92, 86, 86);
+        text-decoration: underline;
+    }
+
+    #footer-mobile h1{
+    color:whitesmoke;
+    font-size: 1rem;
+    text-align: center;
+    }
+
+    .info{ display:none; }
+    
+    #album-foto{
+        justify-content: center;
+        width: 98%;
+    }
+
+    #album-foto img{
+        width: 36.7%;
+        margin: 6px;
+        padding: 5px;
+    }
+
+    nav h1{
+        font-size: 1.4em;
+    }
+
+    form{
+        margin-bottom: 10px;
+        width: 90%;
+    }
+
+    #food{
+        margin-bottom: 10px;
+    }
+
+    #submit{
+        padding: 0px;
+    }
+
+
+    #mm{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100vh;
+        width: 100vw;
+    
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content:flex-end;
+        align-items:center;
+    }
+
+    #mm.hidden{
+        display: none;
+    }
+
+    #mobile-links{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(244, 173, 10);
+    padding: 10px;
+    }
+
+    .links-m{
+        margin-top: 30px;
+        color:black;
+        cursor: pointer;
+    }
+
+    .links-m:active{
+        text-transform: none;
+    }
+}
